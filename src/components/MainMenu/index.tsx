@@ -20,7 +20,7 @@ export function MainMenu() {
   return (
     <StyledMenuWrapper>
       <nav>
-        <img src={logoSVG} alt="React Logo" />
+        <img alt="React Logo" src={logoSVG} />
 
         <ul>
           {menuList.map((route, index) => (
