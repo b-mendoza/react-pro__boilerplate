@@ -9,5 +9,7 @@ export const ContentWrapper = styled.section`
 `;
 
 export const MainLayout = styled.main`
-  display: flex;
+  display: grid;
+
+  grid-template-columns: auto 1fr;
 `;
