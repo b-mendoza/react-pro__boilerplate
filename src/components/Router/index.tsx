@@ -1,9 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { App } from 'components/App';
 import { MainMenu } from 'components/MainMenu';
 
-import { MainLayout } from 'theme/shared';
+import { ContentWrapper, MainLayout } from 'theme/shared';
 
 export function Router() {
   return (
@@ -12,7 +11,34 @@ export function Router() {
         <MainMenu />
 
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/">
+            <Route
+              element={
+                <ContentWrapper>
+                  <h1>Home</h1>
+                </ContentWrapper>
+              }
+              index
+            />
+
+            <Route
+              element={
+                <ContentWrapper>
+                  <h1>About</h1>
+                </ContentWrapper>
+              }
+              path="about"
+            />
+
+            <Route
+              element={
+                <ContentWrapper>
+                  <h1>Users</h1>
+                </ContentWrapper>
+              }
+              path="users"
+            />
+          </Route>
         </Routes>
       </BrowserRouter>
     </MainLayout>
